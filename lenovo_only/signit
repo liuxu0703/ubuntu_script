@@ -1,0 +1,189 @@
+#! /usr/bin/env python
+#coding=utf-8
+import requests
+import os
+import sys
+import getpass
+import json
+from optparse import OptionParser
+
+ERR_BAD_PARAM = -1
+ERR_SIGN_FAIL = -2
+
+class Sign():
+
+    def __init__(self, check_url = True):
+        self.zone_url = {}
+        #xm
+        self.zone_url["xm"] = "http://10.125.159.224:2012"
+        #sh
+        self.zone_url["sh"] = "http://10.4.69.152:2012"
+        #nj
+        self.zone_url["nj"] = "http://10.115.6.247:2012"
+        self.zone_url["bj"] = "http://10.110.7.100:2012"
+        self.zone_url["m"] = ""
+        self.path = os.path.join(os.path.expanduser('~'), '.signconf')
+        self.configs = {}
+        self.cookies = {}
+        try:
+            with open(self.path, 'r') as f:
+                self.configs = json.load(f)
+                self.cookies = self.configs['cookies']
+        except:
+            pass
+        self.rememberme = 'on'
+        if check_url:
+            self.check_url(False)
+
+    def login(self):
+        '''login Sign and save cookies
+        '''
+        cookie_count = 0
+        while cookie_count == 0:
+            username = raw_input('user name:')
+            password = getpass.getpass('pass word:')
+            data = {'username': username, 'password': password,\
+                'rememberme': self.rememberme}
+            s = requests.session()
+            r = s.post(self.url_login, data)
+            for k, v in s.cookies.items():
+                self.cookies[k] = v
+            cookie_count = len(self.cookies)
+            if 0 == cookie_count:
+                print 'login', self.url_login, 'fail, please try again!'
+            self.configs['cookies'] = self.cookies
+        print 'login success'
+
+    def checklogin(self):
+        '''check is login
+        '''
+        if len(self.cookies) == 0:
+            self.login()
+        r = requests.get(self.url_islogin, cookies = self.cookies,\
+            allow_redirects = False)
+        if isinstance(r.json, dict):
+            login_msg = r.json['result']
+        else:
+            login_msg = r.json()['result']
+        if 'true' != login_msg:
+            print 'login', self.url_login, 'time out'
+            self.login()
+
+    def set_url_cmd(self, url):
+        try:
+            self.url = self.zone_url[url]
+        except KeyError as e:
+            self.url = raw_input("Please input base url \
+eg(10.125.159.223):\n")
+        self.configs['url'] = self.url
+
+    def set_url(self):
+        location = raw_input("Select location: [xm] xiamen, \
+[sh] shanghai, [bj] beijing [nj] nanjing [m] manual:\n")
+        try:
+            self.url = self.zone_url[location]
+        except KeyError as e:
+            self.url = raw_input("Please input base url \
+eg(http://10.125.159.224:2012/):\n")
+        if '' == self.url:
+            self.url = raw_input("Please input base url \
+eg(http://10.125.159.224:2012):\n")
+
+    def check_url(self, rewrite = False):
+        '''check url is exist or reset the url.
+            rewrite = True then reset the url
+        '''
+        # url exist and not rest the url
+        if rewrite or len(self.configs) == 0:
+            self.set_url()
+        else:
+            try:
+                self.url = self.configs['url']
+            except:
+                self.set_url()
+        # init the url and judge the url can be used
+        while True:
+            self.url_login = self.url + '/login'
+            self.url_islogin = self.url + '/api/islogin'
+            self.url_tsign = self.url + '/api/tsign'
+            try:
+                r = requests.get(self.url_islogin)
+                break
+            except Exception as e:
+                print e
+                self.set_url()
+        #save the url
+        self.configs['url'] = self.url
+
+    #上传文件，签名后下载到本地
+    def upsignfile(self, keyset, keytype, file):
+            if not os.path.exists(file):
+                print >> sys.stderr, 'File not exist, please check param'
+                sys.exit(ERR_BAD_PARAM)
+            elif os.path.splitext(file)[-1] not in ['.apk','.zip']:
+                print >> sys.stderr, 'Please choose a .apk or .zip file'
+                sys.exit(ERR_BAD_PARAM)
+
+            else:
+                if os.name == 'posix':
+                    host_user = 'USER'
+                elif os.name == 'nt':
+                    host_user = 'USERNAME'
+                udata = {'keyset':keyset, 'keytype':keytype, 'username':os.environ[host_user], 'hostname':os.popen("hostname").read().strip()}
+                ufile = {'uploadfile': open(file, 'rb')}
+                print 'Signing file....'
+                r = requests.post(self.url_tsign, data=udata, files = ufile, cookies = self.cookies)
+                if r.status_code != requests.codes.ok:
+                    print >> sys.stderr, 'Sign file fail, please connect Signit admin !'
+                    sys.exit(ERR_SIGN_FAIL)
+                else:
+                    try:
+                        if r.content[0]=="{" and (len(r.content)<2000):
+                            if not r.json()["res"]:
+                                print >> sys.stderr, r.json()["error"]
+                                sys.exit(ERR_SIGN_FAIL)
+                    except ValueError,e:
+                        #the response is not json,treat as file
+                        pass
+                    except KeyError,e:
+                        print >> sys.stderr, "can not recognize server response:%s"%(r.content[:100])
+                        sys.exit(ERR_SIGN_FAIL)
+                    #下载文件本地名
+                    basefname = ''
+                    pre,ext = os.path.splitext(file)
+                    midlename = "[%s+%s]" %(keyset,keytype)
+                    basefname = pre + midlename + ext
+                    #写入本地文件
+                    if os.path.exists(basefname):
+                        print 'rm old sign file %s' %basefname
+                        os.remove(basefname)
+                    with open(basefname, 'wb') as f:
+                        f.write(r.content)
+                    print 'Sign file success! The file is %s' %basefname
+
+    def __del__(self):
+        with open(self.path, 'wb') as f:
+            import json
+            json.dump(self.configs, f)
+
+if __name__ == '__main__':
+    #set params
+    parser = OptionParser()
+    #set site
+    parser.add_option('-s', '--site', action = 'store', dest = 'site', help = 'Reset site on one cmdl like xm,sh,bj,nj')
+    #上传签名文件
+    parser.add_option('-r', '--keyset', action = 'store', type='string', dest = 'keyset', help = 'keyset, formatter: -r/--keyset keyset(rd,rdv2,odm)')
+    parser.add_option('-t', '--keytype', action = 'store', type='string', dest = 'keytype', help = 'keytype, formatter: -t/--keytype keytype(platform,media,shared,releasekey,app)')
+    parser.add_option('-f', '--file', action = 'store', type='string', dest = 'file', help = 'Signit File, formatter: -f/--file  filename')
+
+    options, args = parser.parse_args()
+    if options.site != None:
+        sign = Sign(False)
+        sign.set_url_cmd(options.site)
+    else:
+        sign = Sign()
+        sign.checklogin()
+        if options.keyset != None and options.keytype != None and options.file != None:
+            sign.upsignfile(options.keyset, options.keytype, options.file)
+        else:
+            print 'Help input sign --help'

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<KeywordSetManager>
+
+    <keywordset>
+        <name>ALL</name>
+        <type>exclude</type>
+        <active>true</active>
+        <keywords>
+
+        </keywords>
+    </keywordset>
+
+    <keywordset>
+        <name>MTP</name>
+        <type>include</type>
+        <active>false</active>
+        <keywords>
+            <k>UsbReceiver</k>
+            <k>MtpService</k>
+            
+            <k>MtpPropertyGroup</k>
+            <k>MtpDatabase</k>
+            <k>MtpDevice</k>
+        
+            <k>MtpStorage</k>
+            <k>MtpUtils</k>
+            <k>MtpRequestPacket</k>
+            <k>MtpServer</k>
+            <k>MtpStringBuffer</k>
+            <k>MtpProperty</k>
+            <k>MtpDataPacket</k>
+            <k>MtpResponsePacket</k>
+            <k>MtpPacket</k>
+            <k>MtpObjectInfo</k>
+            <k>MtpDevice</k>
+            <k>MtpDeviceInfo</k>
+            <k>MtpStorageInfo</k>
+            <k>MtpEventPacket</k>
+            
+            <k>StorageNotification</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>ALL_SDCARD_MODULE</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>#AndroidRuntime</k>
+            <k>#ActivityManager</k>
+            <k>#WatchDog</k>
+            <k>#Trace</k>
+            <k>#DebugUtils</k>
+            <k>#ANR</k>
+            <k>#InterceptInstallAssistor</k>
+
+            <k>Vold</k>
+            <k>DirectVolume</k>
+            <k>ProcessKiller</k>
+            <k>VoldCmdListener</k>
+            <k>VoldConnector</k>
+            <k>fsck_msdos</k>
+            <k>#system\/bin\/fsck_msdos</k>
+
+            <k>MountService</k>
+            <k>#StorageNotification</k>
+            <k>UsbStorageActivity</k>
+            <k>UsbDeviceManager</k>
+            <k>UsbHostManager</k>
+            <k>UsbManager</k>
+            <k>StorageManager</k>
+            <k>Environment</k>
+            
+            <k>SystemUIBootReceiver</k>
+            <k>UsbSettingsManager</k>
+            <k>UsbDebuggingManager</k>
+            <k>UsbDebuggingActivity</k>
+
+            <k>UsbPickerActivity</k>
+            <k>UsbPicker.UmsUtilFragment</k>
+            <k>UsbPicker.AdbUtilFragment</k>
+            <k>UsbPicker.HelpUtilFragment</k>
+
+            <k>MemorySettings</k>
+            <k>RunningState</k>
+            <k>StorageVolumePreferenceCategory</k>
+            <k>StorageMeasurement</k>
+            <k>PrivacySettings</k>
+            <k>MasterClearConfirm</k>
+            <k>MasterClear</k>
+            <k>MediaFormat</k>
+            
+            <k>UsbPicker</k>
+            <k>UsbPicker.Usb30Util</k>
+            <k>UsbPicker.Usb30Service</k>
+            <k>UsbModePreference</k>
+            
+            <k>SizeUtil</k>
+            
+            <k>SwitchPrimaryStorageActivity</k>
+            <k>SwitchStorageSettings</k>
+            <k>UnmountOtgService</k>
+            <k>UnmountOtgReceiver</k>
+
+            <k>SdcardStorageMonitorService</k>
+            <k>DeviceStorageMonitorService</k>
+            
+            <k>ExternalMediaFormatActivity</k>
+            <k>ExternalStorageFormatter</k>
+            
+            <k>MediaProvider</k>
+            <k>UsbReceiver</k>
+            <k>MtpService</k>
+            <k>MtpPropertyGroup</k>
+            <k>MtpDatabase</k>
+            <k>MtpDevice</k>
+        </keywords>
+    </keywordset>
+    
+    
+    <keywordset>
+        <name>PackageManager</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>GMSInstaller</k>
+            <k>LxGoogleMapInstall</k>
+            <k>LxGmsInstall</k>
+        
+            <k>#System.err</k>
+            <k>#AndroidRuntime</k>
+            <k>#dalvikvm</k>
+            
+            <k>PackageParser</k>
+            <k>PackageManager</k>
+            <k>Installer</k>
+            <k>installd</k>
+            <k>pkgname</k>
+            
+            <k>PackageInstaller</k>
+            <k>UninstallerActivity</k>
+            <k>InstallAppProgress</k>
+            <k>UninstallAppProgress</k>
+            
+            <k>ManageApplications</k>
+            <k>ApplicationsState</k>
+            <k>InstalledAppDetails</k>
+            <k>RunningState</k>
+            <k>RunningServicesDetails</k>
+            <k>SavePowerApplications</k>
+            <k>SettingApplication</k>
+
+        </keywords>
+    </keywordset>
+    
+    <keywordset>
+        <name>Tmp</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>LenovoAppDefLocation</k>
+            <k>#AndroidRuntime</k>
+        </keywords>
+    </keywordset>
+    
+    <keywordset>
+        <name>Backup_Recovery</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>PrivacySettings</k>
+            <k>MasterClear</k>
+            <k>MasterClearConfirm</k>
+            <k>MasterClearReceiver</k>
+            <k>RecoverySystem</k>
+            
+            <k>MediaFormat</k>
+            <k>ExternalMediaFormatActivity</k>
+            <k>ExternalStorageFormatter</k>
+
+            <k>Vold</k>
+            <k>MountService</k>
+            <k>ShutdownThread</k>
+        </keywords>
+    </keywordset>
+    
+    <keywordset>
+        <name>CertFileInstaller</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>CertInstaller</k>
+            <k>CertFile</k>
+            <k>CertFileList</k>
+            <k>CredentialHelper</k>
+            <k>certinstaller.Util</k>
+            
+            <k>NativeCrypto</k>
+            <k>AndroidRuntime</k>
+        </keywords>
+    </keywordset>
+    
+    
+    <keywordset>
+        <name>Miracast</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>#AndroidRuntime</k>
+            <k>Miracast</k>
+            <k>Miracast.ListView</k>
+            <k>Miracast.Switch</k>
+            
+            <k>DisplayManager</k>
+
+        </keywords>
+    </keywordset>
+    
+    
+    <keywordset>
+        <name>Exception_Log</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>#System.err</k>
+            <k>ActivityManager</k>
+            <k>AndroidRuntime</k>
+            <k>WatchDog</k>
+            <k>Trace</k>
+            <k>DebugUtils</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>HDMI</name>
+        <type>include</type>
+        <project>racer-a.leos</project>
+        <active>false</active>
+        <keywords>
+            <k>HDMIObserver</k>
+            <k>drm_hdmi</k>
+
+            <k>am_</k>
+            <k>#ActivityManager</k>
+            <k>#GrallocFB</k>
+
+            <k>MediaPlayer</k>
+            <k>Mediaplayer.MeidaAm</k>
+            <k>#VideoPlayerActivity</k>
+            <k>#MovieView</k>
+            <k>MVideoView</k>
+            <k>#Helix</k>
+            <k>#OMXVideoDecoderBase</k>
+            <k>#OMXComponentCodecBase</k>
+            <k>#componentbase</k>
+            <k>#VideoDecoder</k>
+            <k>#MMediaController</k>
+            <k>#OMXCodec</k>
+            <k>#pvr_drv_video</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>shell_exclude</name>
+        <type>exclude</type>
+        <project>shell</project>
+        <active>true</active>
+        <keywords>
+            <k>PowerManager</k>
+            <k>PowerManagerService</k>
+            <k>DisplayPowerState</k>
+            <k>BatteryService</k>
+            <k>BatteryInfoReceiver</k>
+            <k>PowerUI</k>
+            
+            <k>MartinWidget</k>
+            <k>LenovoRootService</k>
+            
+            <k>StatusBar.MSimNetworkController</k>
+            <k>StatusBar.MSimNetworkController_HJK</k>
+            <k>StatusBar.BatteryController</k>
+            <k>StatusBar.NetworkController</k>
+
+            <k>AlarmManager</k>
+            <k>Clock</k>
+            <k>MyTag</k>
+            <k>trafficForceUpdate</k>
+            <k>traffi</k>
+            <k>TimeTickService</k>
+            <k>TelephonyManager</k>
+            <k>LenovoPlatformUtils</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            
+            
+            <k>LenovoWeatherApp</k>
+            <k>SafeCenterService</k>
+            <k>lenovokeyguard.log</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>apple_exclude</name>
+        <type>exclude</type>
+        <project>athena</project>
+        <active>false</active>
+        <keywords>
+            <k>MSimSignalClusterView</k>
+            <k>MmsSystemEventReceiver</k>
+            <k>Mms</k>
+            <k>wpa_supplicant</k>
+            <k>WifiStateMachine</k>
+            
+            <k>StatusBar.MSimNetworkController</k>
+            <k>StatusBar.MSimNetworkController_HJK</k>
+            <k>StatusBar.BatteryController</k>
+            <k>StatusBar.NetworkController</k>
+
+            <k>PowerManagerService</k>
+            <k>PowerManager</k>
+            <k>BatteryService</k>
+            <k>PowerUI</k>
+            <k>IBINDER_HOOK</k>
+            
+            <k>ThermalDaemon</k>
+            <k>AlarmManager</k>
+            <k>dun_service</k>
+            <k>StateMachine</k>
+            <k>KeyguardUpdateMonitor</k>
+
+            <k>dalvikvm</k>
+            <k>uevent</k>
+            
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>airbuse_exclude</name>
+        <type>exclude</type>
+        <project>airbuse</project>
+        <active>true</active>
+        <keywords>
+            <k>CardSetting</k>
+            <k>MSimCarrierText</k>
+            <k>SystemTheme/Resources</k>
+        
+            <k>Clock</k>
+            <k>MyTag</k>
+            <k>AlarmManager</k>
+            
+            <k>InputMethodManagerService</k>
+            <k>InputMethodManager</k>
+            <k>InputDispatcher</k>
+            
+            <k>KeyguardUpdateMonitor</k>
+            <k>Sensors</k>
+            <k>ViewRootImpl</k>
+            <k>libEGL</k>
+            <k>Adreno-EGL</k>
+
+            <k>PowerUI</k>
+            <k>PowerManager</k>
+            <k>PowerManagerService</k>
+            <k>BatteryService</k>
+            <k>DisplayPowerState</k>
+            <k>DisplayPowerController</k>
+            
+            <k>AudioUsbALSA</k>
+            <k>ALSADevice</k>
+            <k>qcom_sensors_hal</k>
+
+            <k>wifi_gbk2utf</k>
+            <k>WifiSwitchDBHelper</k>
+            <k>wpa_supplicant</k>
+            <k>ConnectivityService</k>
+            <k>DataEnabler</k>
+            <k>ConnectivityService</k>
+            
+            <k>LOWI-SERVER</k>
+            <k>LOWI-Scan</k>
+            <k>Diag_Lib</k>
+            <k>CarierUtils</k>
+            <k>topa</k>
+            <k>adsprpc</k>
+            <k>PAD</k>
+            <k>R5</k>
+            <k>INJECT</k>
+            <k>IBINDER_HOOK</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            <k>IBINDER_HOOK_PHONE</k>
+            <k>IBINDER_HOOK_SYSTEM</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>blade2_exclude</name>
+        <type>exclude</type>
+        <project>blade2</project>
+        <active>true</active>
+        <keywords>
+            <k>WifiHW</k>
+            <k>wpa_supplicant</k>
+            <k>WifiStateMachine</k>
+            <k>ComSignalClusterView</k>
+            <k>WifiSignalClusterView</k>
+            <k>EnableSelfNetControl</k>
+            <k>RouteManager</k>
+            
+            <k>EventHub</k>
+            <k>InputReader</k>
+            <k>EVENT_THREAD</k>
+            <k>UpdateRequestReceiver</k>
+
+            <k>PowerManagerService</k>
+            <k>PowerManager</k>
+            <k>BatteryService</k>
+            <k>Charge</k>
+            <k>CurrentMgmtService</k>
+            
+            <k>EffectDs</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            
+            
+            
+            
+            <k>AudioFlinger</k>
+            <k>AlarmManager</k>
+            <k>WindowManager</k>
+            
+            <k>SmartSwitch</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            
+
+            
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>apollo_td_exclude</name>
+        <type>exclude</type>
+        <project>apollo_td.release</project>
+        <active>false</active>
+        <keywords>
+            <k>PowerManagerService</k>
+            <k>CellLayout</k>
+            <k>RK_QZH</k>
+            <k>ToneGenerator</k>
+            <k>AlarmManager</k>
+            <k>FetchWeather</k>
+            <k>BatteryService</k>
+            <k>mIsChargingCompleted</k>
+
+            <k>wpa_supplicant</k>
+            <k>Wifi</k>
+            <k>CarrierLabel</k>
+            <k>OSNetworkSystem</k>
+            <k>MobileDataStateTracker</k>
+            <k>ConnectivityService</k>
+
+            <k>RK_LeTaskMenu_GLAppMenuActivity</k>
+            <k>WorldClockWidget</k>
+            <k>DialerAdapter</k>
+
+            <k>Launcher</k>
+            <k>GC_EXPLICIT freed</k>
+            <k>SntpClient</k>
+            <k>AppWidgetProvider</k>
+
+            <k>PackageManager</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>racer-a_ics_exclude</name>
+        <type>exclude</type>
+        <project>racer-a</project>
+        <active>false</active>
+        <keywords>
+            <k>StatisticsInfoDataSource</k>
+            <k>PowerManagerService</k>
+            <k>PsPushUserData</k>
+            <k>AutoSyncService</k>
+            <k>ThermalManager</k>
+            <k>WiredAccessoryObserver</k>
+            <k>cip_VorbisDec</k>
+            <k>MmsConfig</k>
+            <k>RK_PUSHSDK</k>
+            <k>PackageManager</k>
+            <k>WidiService</k>
+            <k>Vibrator</k>
+            <k>ALSAModuleCDK</k>
+            <k>InputReader</k>
+            <k>ConnectivityService</k>
+            <k>WifiService</k>
+            <k>MobileDataStateTracker</k>
+            <k>RILR</k>
+            <k>RILJ</k>
+            <k>RILB</k>
+            <k>GSM</k>
+            <k>Kernel-Dmesg</k>
+            <k>BatteryService</k>
+            <k>wpa_supplicant</k>
+            <k>WifiHW</k>
+            <k>CAT</k>
+            <k>AMC</k>
+            <k>Vibrator_instance</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>k5_exclude</name>
+        <type>exclude</type>
+        <project>k5</project>
+        <active>false</active>
+        <keywords>
+            <k>System.err</k>
+            <k>System.out</k>
+            <k>#dalvikvm</k>
+            
+            <k>WifiHW</k>
+            <k>wpa_supplicant</k>
+            <k>WifiStateMachine</k>
+            <k>WifiService</k>
+            <k>net_tcp</k>
+            <k>NetworkPolicy</k>
+            <k>NetdConnector</k>
+            
+            <k>StateMachine</k>
+            <k>StatusBar.NetworkController</k>
+            <k>GpsLocationProvider</k>
+            <k>AlarmManager</k>
+            <k>DisplayEventReceiver</k>
+            <k>lenovokeyguard.log</k>
+            <k>AlarmManager</k>
+            <k>AlarmManager</k>
+            
+            
+            
+            <k>InputEventConsistencyVerifier</k>
+            <k>ViewRootImpl</k>
+            <k>KeyguardViewMediator</k>
+            
+            <k>CPDD_SS</k>
+            <k>PushService</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            <k>IBINDER_HOOK</k>
+            <k>topa</k>
+            <k>R5</k>
+            <k>CalendarLogTag</k>
+            <k>AMTL</k>
+            <k>ACRA</k>
+            <k>AsyncTask</k>
+            <k>handmes</k>
+            <k>ydp</k>
+            <k>Aitalk_JNI</k>
+            <k>ViaFly_Aisound5_Jni</k>
+            <k>ydp</k>
+            <k>MSC_LOG</k>
+            <k>Intel\ PowerHAL</k>
+            
+            <k>PowerManagerService</k>
+            <k>DisplayPowerController</k>
+            <k>DisplayPowerState</k>
+            <k>PowerUI</k>
+            <k>BatterySettingController2</k>
+            <k>BatteryConsumeStatusController2</k>
+            <k>StatusBar.BatteryController</k>
+            <k>BatteryInfoReceiver</k>
+
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>S3_exclude</name>
+        <type>exclude</type>
+        <project>s3</project>
+        <active>false</active>
+        <keywords>
+            <k>SignalClusterView</k>
+            <k>StatusBar</k>
+            <k>PowerManagerService</k>
+            <k>SignalStrength</k>
+            <k>KeyguardUpdateMonitor</k>
+            <k>CarrierLabel</k>
+            <k>MobileDataStateTracker</k>
+            <k>StateMachine</k>
+            <k>WifiState</k>
+            <k>ConnectivityService</k>
+            <k>TelephonyRegistry</k>
+            <k>NetworkManagement</k>
+            <k>NetUtils</k>
+            <k>LeosStatusBarTool</k>
+            <k>NetworkPolicy</k>
+            <k>AlarmManager</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            <k>wu0wu</k>
+            <k>NetConnectReceiver</k>
+            <k>PowerUI</k>
+            <k>NetConnWrapper</k>
+            <k>handmes</k>
+            <k>TelephonyProvider</k>
+            <k>NetworkStats</k>
+            <k>NetdConnector</k>
+            <k>GpsLocationProvider</k>
+            <k>RK_PUSHSETTING</k>
+            <k>RK_PUSHSDK</k>
+            <k>RetryManager</k>
+            <k>LenovoLeosWorldTimeWidgetProvider</k>
+            <k>LocalSocketImpl</k>
+            <k>OpenGLRenderer</k>
+            <k>wy</k>
+            <k>ydp</k>
+            <k>R5</k>
+            <k>R4</k>
+            <k>SimCardProcess</k>
+            <k>simContactsProvider</k>
+            <k>GoogleOta</k>
+            <k>BatteryMoniterService</k>
+            <k>StatusBar.BatteryController</k>
+            <k>SDAC</k>
+            <k>INJECT</k>
+            <k>PhoneStatusBar</k>
+        </keywords>
+    </keywordset>
+
+
+    <keywordset>
+        <name>k7_kk_exclude</name>
+        <type>exclude</type>
+        <project>k7</project>
+        <active>true</active>
+        <keywords>
+            <k>DisplayPowerState</k>
+            <k>qdlights</k>
+            <k>LightsService</k>
+            <k>SurfaceFlinger</k>
+            <k>ffi_jank</k>
+
+            <k>wifi</k>
+            <k>wpa_supplicant</k>
+            <k>MSimTelephonyRegistry</k>
+            
+            <k>PowerManagerService</k>
+            <k>PowerUI</k>
+            <k>AlarmManager</k>
+            <k>BatteryService</k>
+
+            <k>QCALOG</k>
+            <k>CmccMainReceiver</k>
+            <k>RecommandedGameManager</k>
+            <k>LenovoWeatherApp</k>
+            <k>IBINDER_HOOK_UTILS</k>
+            
+            <k>MyTag</k>
+            <k>Clock</k>
+            
+            <k>InputMethodManagerService</k>
+            <k>InputReader</k>
+            <k>EventHub</k>
+            <k>MyTag</k>
+            <k>Clock</k>
+        </keywords>
+    </keywordset>
+    
+
+    <keywordset>
+        <name>alaska_exclude</name>
+        <type>exclude</type>
+        <project>alaska</project>
+        <active>false</active>
+        <keywords>
+            <k>PowerManagerService</k>
+            <k>msm7627a.hwcomposer</k>
+            <k>copybit</k>
+            <k>WifiState</k>
+            <k>Test0111</k>
+            <k>AlarmManager</k>
+            <k>KeyguardUpdateMonitor</k>
+            <k>PowerUI</k>
+            <k>LeosStatusBarToolService</k>
+            <k>StatusBar.MSimNetworkController</k>
+            <k>Diag_Lib</k>
+            
+            <k>SignalStrength</k>
+            <k>MSimKeyguardStatusView</k>
+            <k>SafeWidget-ScanAppInfo</k>
+            <k>KeyguardStatusView</k>
+            <k>IBINDER_HOOK</k>
+            <k>AudioHardwareMSM76XXA</k>
+            <k>ImageWallpaper</k>
+            <k>LenovoLeosWorldTimeWidgetProvider</k>
+            <k>GpsLocationProvider</k>
+            <k>ConnectReceiver</k>
+            <k>SimCardProcess</k>
+            <k>ConnectivityService</k>
+            <k>wu0wu</k>
+            <k>NetdConnector</k>
+            <k>R2</k>
+            
+            <k>dun_service</k>
+            <k>INJECT</k>
+            <k>simContactsProvider</k>
+            <k>MusicPlayer</k>
+        </keywords>
+    </keywordset>
+
+</KeywordSetManager>

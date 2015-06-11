@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<KeywordSetManager>
+
+    <keywordset>
+        <name>ALL</name>
+        <type>exclude</type>
+        <active>true</active>
+        <keywords>
+
+        </keywords>
+    </keywordset>
+
+    <keywordset>
+        <name>Iv</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>liuxu</k>
+            <k>AndroidRuntime</k>
+            
+            <k>#System.err</k>
+            <k>#AccountSystem</k>
+            <k>#ImageLoader</k>
+            
+            <k>UserAvatarManager</k>
+            <k>AvatarManager</k>
+            <k>AccountRequest</k>
+            <k>QiniuFileManager</k>
+            <k>DBManager</k>
+            <k>MessageListener</k>
+            <k>FileUtils</k>
+            <k>CropImage</k>
+            
+            <k>SplashActivity</k>
+            <k>LoginActivity</k>
+            <k>OfflineActivity</k>
+            <k>MainActivity</k>
+            <k>GalleryActivity</k>
+            <k>ContactFragment</k>
+            
+            <k>IvBabyApp</k>
+            <k>IvTeacherApp</k>
+            <k>AccountManager</k>
+            <k>RongIMManager</k>
+
+            <k>CameraListActivity</k>
+            <k>TimeRuleSideMenu</k>
+
+        </keywords>
+    </keywordset>
+
+    <keywordset>
+        <name>IvBaby</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>liuxu</k>
+            <k>AndroidRuntime</k>
+            <k>#System.err</k>
+            
+            <k>IvBabyApplication</k>
+            <k>AccountManager</k>
+            <k>RongIMManager</k>
+            <k>UserAvatarManager</k>
+            <k>AccountRequest</k>
+            <k>#ImageLoader</k>
+            <k>QiniuFileManager</k>
+            <k>MessageListener</k>
+
+            <k>SplashActivity</k>
+            <k>LoginActivity</k>
+            <k>OfflineActivity</k>
+            <k>MainActivity</k>
+            <k>CameraListActivity</k>
+            <k>GalleryActivity</k>
+
+            <k>ContactFragment</k>
+            
+            <k>CropImage</k>
+            <k>TimeRuleSideMenu</k>
+
+            <k>FileUtils</k>
+            <k>AvatarManager</k>
+
+            <k>#AccountSystem</k>
+        </keywords>
+    </keywordset>
+    
+    
+        <keywordset>
+        <name>IvTeacher</name>
+        <type>include</type>
+        <active>true</active>
+        <keywords>
+            <k>liuxu</k>
+            <k>AndroidRuntime</k>
+            <k>System.err</k>
+            
+            <k>IvTeacherApp</k>
+            <k>AccountManager</k>
+            <k>AccountRequest</k>
+            <k>RongIMManager</k>
+            <k>AvatarManager</k>
+            <k>DBManager</k>
+            <k>MessageListener</k>
+            <k>#ImageLoader</k>
+
+            <k>MainActivity</k>
+            <k>LoginActivity</k>
+            <k>SplashActivity</k>
+            <k>OfflineActivity</k>
+            <k>MainActivity</k>
+            <k>BabyDetailActivity</k>
+            <k>GalleryActivity</k>
+
+            <k>ContactFragment</k>
+            <k>MainFragment</k>
+
+            <k>FileUtils</k>
+            <k>AvatarManager</k>
+
+        </keywords>
+    </keywordset>
+    
+    
+    <keywordset>
+        <name>Nubia_IvBaby_exclude</name>
+        <type>exclude</type>
+        <active>true</active>
+        <keywords>
+            <k>LocSvc_libulp</k>
+            <k>LocSvc_api_v02</k>
+            <k>LocSvc_ApiV02</k>
+            <k>XTWiFiLP</k>
+            <k>Ulp_jni</k>
+            <k>Wiper_jni</k>
+            <k>SMACK</k>
+            <k>ACDB-LOADER</k>
+            <k>MSAP-NATIVE</k>
+            <k>libGameXtend</k>
+            <k>Adreno-EGL</k>
+            <k>AmSmartShowFuncsImpl</k>
+            <k>lmn</k>
+            <k>AppTrafficModel</k>
+            <k>TrafficModelManager</k>
+            
+            <k>PowerManager</k>
+            <k>PackageManager</k>
+            <k>AlarmManager</k>
+            <k>AudioPolicyManagerUtil</k>
+            <k>AudioPolicyManager</k>
+            <k>SmartAudioService</k>
+            <k>viewflow</k>
+            
+            <k>MSimSignalClusterView</k>
+            <k>MSAPMReceiver</k>
+            <k>MSAPM</k>
+            <k>StatusBar.MSimNetworkController</k>
+            <k>wpa_supplicant</k>
+            <k>wifi_gbk2utf</k>
+            
+            
+            
+
+        </keywords>
+    </keywordset>
+
+</KeywordSetManager>
